@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+body * {
+    font-family: 'Syne', sans-serif;
+}
+
+header, header *{
+    height: 80px;
+}
+footer, footer *{
+    height: 60px;
+}
+
+
+.inside-header{
+    justify-content: space-between;
+    margin:0 !important;
+    padding:0 !important;
+    max-width: none !important;
+}
+
+.site-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-logo img{
+    width: 200px;
+    object-fit: cover;
+}
+.site-logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.mon-menu ul{
+    display: flex;
+    gap: 15px;
+}
+.mon-menu-footer ul{
+    display: flex;
+    margin:0;
+    padding:0;
+}
+.mon-menu ul li, .mon-menu-footer ul li{
+    list-style: none;
+}
+.mon-menu ul a{
+    text-decoration: none;
+    padding: 30px;
+    display:flex;
+    color: black;
+    font-size: 16px;
+}
+.mon-menu-footer ul li a{
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+}
+.mon-menu ul li.full-height a{
+    background:#DC9F96;
+}
+
+h1 {
+    font-size: 38px;
+    text-transform: uppercase !important;
+    text-align: center;
+    font-weight: 800;
+}
