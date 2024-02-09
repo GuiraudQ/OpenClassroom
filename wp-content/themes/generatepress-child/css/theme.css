@@ -64,6 +64,7 @@ footer, footer *{
     color: black;
     font-size: 16px;
 }
+
 .mon-menu ul li.full-height a{
     background:#DC9F96;
 }
@@ -73,4 +74,127 @@ h1 {
     text-transform: uppercase !important;
     text-align: center;
     font-weight: 800;
+}
+
+.landing-section {
+    margin: 0 !important;
+    padding: 0% !important;
+    padding-top: 100px !important;
+}
+
+.plante-images {
+    position: relative;
+    margin-top: 100px !important;
+}
+.plante-images div{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 2;
+}
+.plante-images > div:nth-child(1){
+    justify-content: start;
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    z-index: 0;
+}
+.plante-images > div:nth-child(3){
+    justify-content: start;
+    position:absolute;
+    bottom:0;
+    right: 50%;
+    transform: translate(100%, -50%);
+    z-index: 0;
+}
+
+hr.divider-shadows {
+    border: #ECE2DA 50px solid !important;
+    border-radius: 0 0 100% 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0px 10px  #E3D9D0;
+}
+hr.divider {
+    border: #ECE2DA 50px solid !important;
+    border-radius: 0 0 100% 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.plants-energy {
+    padding: 75px 0 25px 0;
+}
+
+.gout-section {
+    margin: 0px !important;
+}
+.gout-section > div {
+    padding: 50px !important;
+}
+
+.gout-galery figcaption {
+    background: none !important;
+    min-height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    margin: 0 !important;
+}
+.pense-section {
+    padding: 5% 10%;
+    margin: 0;
+}
+.pense-section .personne-section > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.pense-section .personne-section .personne-bloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.rencontre-header {
+    padding: 10% 30% 0 30%;
+    margin: 0;
+}
+.rencontre-header *{
+    margin: 25px 0;
+}
+.rencontre-header img{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 200px;
+}
+.equipe-section h2{
+    padding: 100px 0;
+}
+.rencontre-form-section {
+    padding: 0 35%;
+    position: relative;
+}
+.rencontre-form-section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+}
+.rencontre-form-section form *{
+    z-index: 10;
+}
+.rencontre-form-section img{
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    z-index: 0;
 }
