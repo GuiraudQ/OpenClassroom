@@ -3,12 +3,18 @@
 body * {
     font-family: 'Syne', sans-serif;
 }
+.wp-block-columns{
+    margin: 0;
+}
 
 header, header *{
     height: 80px;
 }
 footer, footer *{
     height: 60px;
+}
+.bottom-canette{
+    background: #ECE2DA url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/02/blablabla.png);
 }
 
 
@@ -197,4 +203,97 @@ hr.divider {
     bottom: 0%;
     left: 30%;
     z-index: 0;
+}
+.titre-rencontre{
+    position: relative;
+}
+.titre-rencontre::after{
+    content:"";
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/Group-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left:0;
+    transform: translate(-100%, -50%);
+    z-index: 0;
+}
+.wpcf7-form :nth-child(4) {
+    position: relative;
+}
+.wpcf7-form :nth-child(4)::after {
+    content:"";
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/Group-16.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transform: translate(-50%, 50%);
+    z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .titre-rencontre::after, .wpcf7-form :nth-child(4)::after{
+        display: none;
+        content: none;
+    }
+}
+
+.formulaire-commande {
+    background: #3B8E46;
+}
+.formulaire-commande form{
+    display: flex;
+    border-top: 1px solid white;
+    margin: 0 20%;
+}
+.formulaire-commande form legend{
+    font-family: "Syne", Arial;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+.formulaire-commande form label {
+    font-family: "Syne", Arial;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
+.command-info{
+    border-bottom: 1px solid white;
+}
+.command-info p{
+    display: flex;
+    gap: 25px;
+}
+.command-info p label:nth-child(1){
+    background: red
+}
+.command-info p label:nth-child(3){
+    background: blue
+}
+.command-info p label:nth-child(5){
+    background: yellow
+}
+.command-info p label:nth-child(7){
+    background: green
+}
+.command-info p label{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.info-form {
+    display: flex;
+}
+.info-form fieldset input {
+    border-radius: 7px;
 }
