@@ -1,4 +1,8 @@
+/*************************************** Import **************************************************/
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+/*************************************** Général **************************************************/
 
 body * {
     font-family: 'Syne', sans-serif;
@@ -7,17 +11,33 @@ body * {
     margin: 0;
 }
 
-header, header *{
-    height: 80px;
-}
+
 footer, footer *{
     height: 60px;
 }
 .bottom-canette{
     background: #ECE2DA url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/02/blablabla.png);
 }
+h1 {
+    font-size: clamp(22px, 4vw, 38px) !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    font-weight: 800;
+}
+h2 {
+    font-size: clamp(18px, 2.5vw, 32px) !important;
+}
+h3 {
+    font-size: clamp(14px, 2vw, 26px) !important;
+}
+p {
+    font-size: clamp(12px, 1.5vw, 18px) !important;
+}
 
-
+/*************************************** Header **************************************************/
+header, header *{
+    height: 80px;
+}
 .inside-header{
     justify-content: space-between;
     margin:0 !important;
@@ -41,7 +61,6 @@ footer, footer *{
     align-items: center;
     padding: 30px;
 }
-
 
 .mon-menu ul{
     display: flex;
@@ -75,12 +94,7 @@ footer, footer *{
     background:#DC9F96;
 }
 
-h1 {
-    font-size: 38px;
-    text-transform: uppercase !important;
-    text-align: center;
-    font-weight: 800;
-}
+/*************************************** Landing page **************************************************/
 
 .landing-section {
     margin: 0 !important;
@@ -139,29 +153,39 @@ hr.divider {
 .gout-section > div {
     padding: 50px !important;
 }
-
+.gout-galery {
+    margin: 3% 0 !important;
+}
 .gout-galery figcaption {
     background: none !important;
     min-height: 100% !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px !important;
+    font-size: clamp(22px, 2.5vw, 38px) !important;
     font-weight: 800 !important;
     text-transform: uppercase;
     margin: 0 !important;
 }
+
 .pense-section {
     padding: 5% 10%;
     margin: 0;
 }
+.pense-section .personne-section{
+    flex-wrap: wrap;
+}
+.pense-section .personne-section > div{
+    flex-grow: 1;
+}
 .pense-section .personne-section > div > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 50px 0;
+    width: 100%;
 }
 .pense-section .personne-section .personne-bloc{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,6 +221,7 @@ hr.divider {
 }
 .rencontre-form-section form *{
     z-index: 10;
+    width: 100%;
 }
 .rencontre-form-section img{
     position: absolute;
@@ -221,10 +246,10 @@ hr.divider {
     transform: translate(-100%, -50%);
     z-index: 0;
 }
-.wpcf7-form :nth-child(4) {
+.rencontre-form-section .wpcf7-form :nth-child(4) {
     position: relative;
 }
-.wpcf7-form :nth-child(4)::after {
+.rencontre-form-section .wpcf7-form :nth-child(4)::after {
     content:"";
     display: flex;
     width: 150px;
@@ -239,26 +264,33 @@ hr.divider {
     z-index: 0;
 }
 
-@media screen and (max-width: 800px) {
-    .titre-rencontre::after, .wpcf7-form :nth-child(4)::after{
-        display: none;
-        content: none;
-    }
-}
-
 .formulaire-commande {
     background: #3B8E46;
 }
 .formulaire-commande form{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20%;
+}
+.formulaire-commande form > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-top: 1px solid white;
     margin: 0 20%;
+}
+.formulaire-commande form > div > p span{
+    display: none;
 }
 .formulaire-commande form legend{
     font-family: "Syne", Arial;
     font-size: 30px;
     color: white;
     font-weight: 700;
+    margin: 0;
 }
 .formulaire-commande form label {
     font-family: "Syne", Arial;
@@ -266,34 +298,168 @@ hr.divider {
     color: white;
     font-weight: 400;
 }
+
+
+.gout-bg{
+    display: inline-block;
+    position: relative;
+}
+.gout-bg figcaption{
+    width: max-content;
+    max-width: 12vw;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Syne;
+    font-size: 20px !important;
+    font-weight: 800;
+    color: white;
+}
 .command-info{
     border-bottom: 1px solid white;
+    width: 50vw;
+    padding: 35px 0;
+    margin: 35px 0;
+}
+.command-info .info-bloc{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.command-info .info-bloc > div{
+    flex-basis: 200px;
+    flex-grow: 1;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.command-info .info-bloc p, .command-info .info-bloc br{
+    display: none;
+}
+/*
+.command-info{
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin: 35px 0;
 }
 .command-info p{
     display: flex;
     gap: 25px;
+    justify-content: center;
 }
-.command-info p label:nth-child(1){
-    background: red
+.command-info br{
+    display: none;
 }
-.command-info p label:nth-child(3){
-    background: blue
+.command-info p label{
+    width: 100%;
+    padding: 20px 0;
 }
-.command-info p label:nth-child(5){
-    background: yellow
+.command-info p label > span:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px 10px;
+    max-height: 130px;
+    font-family: Syne;
+    font-size: 20px;
+    font-weight: 800;
 }
-.command-info p label:nth-child(7){
-    background: green
+.command-info p label:nth-child(1) > span:nth-child(2){
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/jeremy-bezanger-0QgbyZdhX7k-unsplash-1.png);
+    background-size: cover;
 }
+.command-info p label:nth-child(3) > span:nth-child(2){
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/estudio-bloom-tOitjphtIXU-unsplash-1.png);
+    background-size: cover;
+}
+.command-info p label:nth-child(5) > span:nth-child(2){
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/rodion-kutsaev-4k8xEFW4_3Q-unsplash-1.png);
+    background-size: cover;
+}
+.command-info p label:nth-child(7) > span:nth-child(2){
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/estudio-bloom-ezqnxsqUZ80-unsplash-1.png);
+    background-size: cover;
+}
+*/
 .command-info p label{
     display: flex;
     flex-direction: column;
-    
+    gap: 15px;
+    align-items: center;
+}
+.command-info input.wpcf7-form-control{
+    width: 60px;
 }
 
 .info-form {
     display: flex;
+    justify-content:space-between;
+    padding: 35px 0;
+    width: 50vw;
+}
+.info-form::after{
+    content: "";
+    background-color: white;
+    height: 366px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+}
+.info-form p{
+    margin:0
+}
+.info-form legend{
+    padding-bottom: 35px;
+}
+.info-form fieldset:last-child{
 }
 .info-form fieldset input {
     border-radius: 7px;
+}
+.formulaire-commande form input[type="submit"] {
+    background: #E0B9B4;
+    border-radius: 5px;
+}
+
+/************************************************************************************
+Responsive
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+    /*************************************** Header **************************************************/
+    header, header *{
+        height: auto;
+    }
+    .inside-header{
+        flex-direction: column !important;
+    }
+    .mon-menu ul{
+        margin:0;
+    }
+
+    /***************************************  **************************************************/
+    .titre-rencontre::after, .wpcf7-form :nth-child(4)::after{
+        display: none;
+        content: none;
+    }
+    .rencontre-form-section {
+        padding: 0 20vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    /*************************************** Header **************************************************/
+    .mon-menu ul{
+        flex-direction: column;
+        gap:0
+    }
+    .mon-menu ul a{
+        padding: 10px;
+        justify-content: center;
+    }
+    /***************************************  **************************************************/
 }
