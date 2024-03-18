@@ -16,7 +16,7 @@ footer, footer *{
     height: 60px;
 }
 .bottom-canette{
-    background: #ECE2DA url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/02/blablabla.png);
+    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/02/blablabla.png);
 }
 h1 {
     font-size: clamp(22px, 4vw, 38px) !important;
@@ -28,10 +28,10 @@ h2 {
     font-size: clamp(18px, 2.5vw, 32px) !important;
 }
 h3 {
-    font-size: clamp(14px, 2vw, 26px) !important;
+    font-size: clamp(16px, 2vw, 26px) !important;
 }
 p {
-    font-size: clamp(12px, 1.5vw, 18px) !important;
+    font-size: clamp(14px, 1.5vw, 18px) !important;
 }
 
 /*************************************** Header **************************************************/
@@ -162,7 +162,7 @@ hr.divider {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(22px, 2.5vw, 38px) !important;
+    font-size: clamp(12px, 2.2vw, 32px) !important;
     font-weight: 800 !important;
     text-transform: uppercase;
     margin: 0 !important;
@@ -212,6 +212,10 @@ hr.divider {
     padding: 0 35%;
     position: relative;
 }
+.rencontre-form-section H2{
+    padding: 35px 0;
+    position: relative;
+}
 .rencontre-form-section form{
     display: flex;
     justify-content: center;
@@ -229,6 +233,9 @@ hr.divider {
     left: 30%;
     z-index: 0;
 }
+.wp-block-columns.has-background.is-layout-flex.wp-container-core-columns-layout-4.wp-block-columns-is-layout-flex + .bottom-canette{
+    background: #ECE2DA url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/02/blablabla.png);
+}
 .titre-rencontre{
     position: relative;
 }
@@ -245,6 +252,11 @@ hr.divider {
     left:0;
     transform: translate(-100%, -50%);
     z-index: 0;
+}
+.rencontre-form-section form input[type="submit"] {
+    background: #E0B9B4;
+    border-radius: 5px;
+    width: auto;
 }
 .rencontre-form-section .wpcf7-form :nth-child(4) {
     position: relative;
@@ -266,6 +278,9 @@ hr.divider {
 
 .formulaire-commande {
     background: #3B8E46;
+}
+.formulaire-commande h1{
+    padding: 35px 0;
 }
 .formulaire-commande form{
     display: flex;
@@ -299,24 +314,36 @@ hr.divider {
     font-weight: 400;
 }
 
-
 .gout-bg{
     display: inline-block;
     position: relative;
 }
+/* .gout-bg figcaption{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: Syne;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+} */
+
 .gout-bg figcaption{
     width: max-content;
-    max-width: 12vw;
+    max-width: 10vw;
     margin: 0;
-    position: absolute;
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-family: Syne;
-    font-size: 20px !important;
+    font-size: clamp(16px, 1.5vw, 24px) !important;
+    text-transform: uppercase;
     font-weight: 800;
     color: white;
 }
+
 .command-info{
     border-bottom: 1px solid white;
     width: 50vw;
@@ -329,7 +356,7 @@ hr.divider {
     gap: 25px;
 }
 .command-info .info-bloc > div{
-    flex-basis: 200px;
+    flex-basis: clamp(150px,10vw,200px);
     flex-grow: 1;
     display: flex;
     gap: 15px;
@@ -340,53 +367,7 @@ hr.divider {
 .command-info .info-bloc p, .command-info .info-bloc br{
     display: none;
 }
-/*
-.command-info{
-    border-bottom: 1px solid white;
-    width: 100%;
-    margin: 35px 0;
-}
-.command-info p{
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-}
-.command-info br{
-    display: none;
-}
-.command-info p label{
-    width: 100%;
-    padding: 20px 0;
-}
-.command-info p label > span:nth-child(2){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 50px 10px;
-    max-height: 130px;
-    font-family: Syne;
-    font-size: 20px;
-    font-weight: 800;
-}
-.command-info p label:nth-child(1) > span:nth-child(2){
-    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/jeremy-bezanger-0QgbyZdhX7k-unsplash-1.png);
-    background-size: cover;
-}
-.command-info p label:nth-child(3) > span:nth-child(2){
-    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/estudio-bloom-tOitjphtIXU-unsplash-1.png);
-    background-size: cover;
-}
-.command-info p label:nth-child(5) > span:nth-child(2){
-    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/rodion-kutsaev-4k8xEFW4_3Q-unsplash-1.png);
-    background-size: cover;
-}
-.command-info p label:nth-child(7) > span:nth-child(2){
-    background: url(http://localhost:8888/oc-Planty/wp-content/uploads/2024/01/estudio-bloom-ezqnxsqUZ80-unsplash-1.png);
-    background-size: cover;
-}
-*/
+
 .command-info p label{
     display: flex;
     flex-direction: column;
@@ -396,31 +377,29 @@ hr.divider {
 .command-info input.wpcf7-form-control{
     width: 60px;
 }
-
 .info-form {
     display: flex;
     justify-content:space-between;
-    padding: 35px 0;
-    width: 50vw;
+    margin: 35px 0;
+    width: 100%;
+    max-width: 50vw;
+    overflow: hidden;
+    position: relative;
+}
+.info-form fieldset{
+    width: 40%;
 }
 .info-form::after{
     content: "";
     background-color: white;
-    height: 366px;
+    height: 100%;
     width: 1px;
     position: absolute;
     left: 50%;
 }
-.info-form p{
-    margin:0
-}
-.info-form legend{
+.command-info legend{
     padding-bottom: 35px;
-}
-.info-form fieldset:last-child{
-}
-.info-form fieldset input {
-    border-radius: 7px;
+    font-size: clamp(18px, 2.5vw, 32px) !important;
 }
 .formulaire-commande form input[type="submit"] {
     background: #E0B9B4;
@@ -430,6 +409,27 @@ hr.divider {
 /************************************************************************************
 Responsive
 *************************************************************************************/
+@media screen and (max-width: 1200px) {
+    .rencontre-header {
+        padding: 10% 15% 0 15%;
+    }
+    .rencontre-form-section {
+        padding: 0 20%;
+    }
+    .formulaire-commande form{
+        margin: 0 10%;
+    }
+    .formulaire-commande form > div{
+        margin: 0 10%;
+    }
+    .command-info{
+        width: 100%;
+    }
+    .info-form{
+        width: 100%;
+        max-width: 100%;
+    }
+}
 @media screen and (max-width: 800px) {
     /*************************************** Header **************************************************/
     header, header *{
@@ -447,8 +447,20 @@ Responsive
         display: none;
         content: none;
     }
+    .gout-bg figcaption{
+        max-width: 20vw;
+    }
     .rencontre-form-section {
         padding: 0 20vw;
+    }
+    .info-form {
+        flex-direction: column;
+    }
+    .info-form fieldset{
+        width: auto;
+    }
+    .info-form::after{
+        content: none;
     }
 }
 @media screen and (max-width: 550px) {
@@ -462,4 +474,17 @@ Responsive
         justify-content: center;
     }
     /***************************************  **************************************************/
+    .gout-bg figcaption{
+        max-width: 35vw;
+    }
+    .rencontre-form-section {
+        padding: 0 ;
+    }
+    .command-info{
+        width: 60vw;
+    }
+    .info-form{
+        width: 60vw;
+        max-width: 60vw;
+    }
 }
